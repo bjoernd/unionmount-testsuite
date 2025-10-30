@@ -1,4 +1,5 @@
 from errno import *
+from toolbox import TestError
 
 ###############################################################################
 #
