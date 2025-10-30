@@ -88,6 +88,7 @@ def subtest_5(ctx):
             raise TestError(f + ": Access time unexpectedly changed")
         if ctx.get_file_mtime(f) != mtime:
             raise TestError(f + ": Modification time unexpectedly changed")
+    time.sleep(0.002)
     ctx.utimes(f)
     if not ctx.termslash():
         if ctx.get_file_atime(f) == atime:
